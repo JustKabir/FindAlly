@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    {{!-- <link href="css/navbarfooter.css" rel="stylesheet"> --}}
+    <link href="/css/navbarfooter.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+
+    {{!-- <link href="css/index.css" rel="stylesheet"> --}}
+
+    <title>Student Login | FindAlly</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo center">FindAlly</a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="row">
+            <div class="col l5 logincard">
+                <div class="card">
+                    <div class="card-content center">
+                        <p class="title">Student Login</p>
+                        <div class="row">
+                                <form action="/student/login" method="POST">
+                            <div class="input-field col s12">
+                                <input id="username" name="email" type="text" class="validate">
+                                <label for="username">E-mail</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="password" type="password" name="password" class="validate">
+                                <label for="password">Password</label> 
+                            </div>
+                            {{!-- <a class="waves-effect waves-light btn loginsubmit" href="studenthome.html">Login</a> --}}
+                                <button class="waves-effect waves-light btn loginsubmit">Submit</button>
+                                </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l7 homeimg">
+                <img src="/assets/homebg.jpg" alt="home">
+            </div>
+        </div>
+    </main>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

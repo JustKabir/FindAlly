@@ -1,0 +1,194 @@
+.homeimg img, .logincard {
+    height: 95vh !important;
+    width: 100%;
+    object-fit: contain;
+}
+
+.logincard {
+    background-color: #87c75d;
+}
+
+.logincard .card {
+    background-color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loginbtn {
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: #ee9949 !important;
+}
+
+.card .title {
+    font-size: 3rem;
+    margin: 0 !important;
+    margin-bottom: 2rem !important;
+    color: #87c75d;
+    text-align: center;
+}
+
+.loginsubmit {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ee9949 !important;
+    margin-top: 2rem;
+}
+
+.post-container .card {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0;
+    box-shadow: none;
+    border: 1px solid #eeeeee;
+    border-radius: 0.5rem;
+}
+
+.post-container .card-title .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem !important;
+}
+
+.card-content .chip, .chips .chip, .project-info .chip, .skills-chips .chip {
+    background-color: #e2ffce;
+    border-radius: 0.5rem;
+}
+
+.member-chip{
+    background-color: #fae9da !important;
+    border-radius: 5rem !important;
+}
+
+.chips .chip:focus{
+    background-color: #2f4620;
+}
+
+.chips{
+    width: 97% !important;
+    position: relative;
+    left: 1.5% !important;
+}
+
+.card-action {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card-action span, .member-info-span {
+    display: flex;
+}
+
+.card-action a {
+    color: #ee9949 !important;
+}
+
+.card-action i {
+    margin-top: 0.1rem;
+    font-size: 1.3rem;
+}
+
+.member-info-span i{
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.card-action p {
+    margin: 0;
+}
+
+.member-info-span p{
+    margin: 0;
+    margin-top: 0.65rem;
+}
+
+.notif-container {
+    border: 1px solid #eeeeee !important;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    height: 60vh;
+}
+
+.notif-header h5 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.notif-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.notif-item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notif-item-header p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.notif-item-header h6:hover {
+    text-decoration: underline;
+}
+
+.notif-item-date p {
+    font-size: 0.8rem;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+.notif-item-body {
+    margin-top: 0.5rem;
+}
+
+.notif-item-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.tabs .indicator {
+    background-color: #ee9949 !important;
+}
+
+.tab .active:focus {
+    background-color: #ee994917 !important;
+}
+
+.submit-btn {
+    background-color: #ee9949 !important;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+}
+
+.initiate-form{
+    border: 1px solid #eeeeee;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.action-btns{
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.edit-btn, .delete-btn{
+    color: #ee9949;
+    margin-left: 1rem;
+}
+
+.avatar{
+    padding-left: 1rem !important;
+}

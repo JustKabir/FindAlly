@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="/css/navbarfooter.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+
+    <title>Initiate Project | FindAlly</title>
+</head>
+
+<body>
+       <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">FindAlly</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="/assets/sidenav.jpg">
+                </div>
+                <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                        src="https://init-svg.herokuapp.com/svg/Abdul/Kabir/ffffff/animate"></a>
+                <a href="studentprofile.html"><span class="name">Abdul Kabir <i
+                            class="material-icons tiny">create</i></span></a>
+                <a href="#email"><span class="email">abdulkabir@gmail.com</span></a>
+            </div>
+        </li>
+        <li class="active"><a href="studenthome.html" class="waves-effect"><i class="material-icons">home</i>Home</a>
+        </li>
+        <li><a href="myprojects.html" class="waves-effect"><i class="material-icons">bubble_chart</i>My
+                Projects</a></li>
+        <li><a href="initiateproject.html" class="waves-effect"><i class="material-icons">add</i>Initiate Project</a>
+        </li>
+        <li><a href="newassignments.html" class="waves-effect"><i class="material-icons">queue</i>New Assignments</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+        <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col l3 hide-on-med-and-down">
+            <ul id="slide-out" class="sidenav sidebar">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="./assets/sidenav.jpg">
+                        </div>
+                        <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                                src="https://init-svg.herokuapp.com/svg/{{user.name}}/Uni/ffffff/animate"></a>
+                        <a href="studentprofile.html"><span class="name">{{user.name}} <i
+                                    class="material-icons tiny">create</i></span></a>
+                        <a href="#email"><span class="email">{{user.email}}</span></a>
+                    </div>
+                </li>
+                <li class="active"><a href="studenthome.html" class="waves-effect"><i
+                            class="material-icons">home</i>Home</a></li>
+                <li><a href="/student/groups" class="waves-effect"><i class="material-icons">bubble_chart</i>My
+                        Groups</a></li>
+                {{!-- <li><a href="initiateproject.html" class="waves-effect"><i class="material-icons">add</i>Initiate
+                        Project</a>
+                </li> --}}
+                <li><a href="newassignments.html" class="waves-effect"><i class="material-icons">queue</i>New
+                        Assignments</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+                <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+            </ul>
+        </div>
+        <div class="col l6 initiate-form">
+            <h4 class="center" style="color: #ee9949;">Initiate Group</h4>
+            <form action="/student/assignment/{{assignmentId}}/create-group" method="POST">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="proj_name" type="text" name="name" class="validate">
+                        <label for="proj_name">Group Name</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="proj_assigned" type="text" name="topic" class="validate">
+                        <label for="proj_assigned">Project name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="proj_desc" type="text" id="textarea1" name="description" class="materialize-textarea"></textarea>
+                        <label for="proj_desc">Project Description</label>
+                    </div>
+                    {{!-- <div class="input-field col s6 m4">
+                        <input id="no_of_people" type="number" class="validate">
+                        <label for="no_of_people">Number of Members</label>
+                    </div> --}}
+                    {{!-- <div class="input-field col s6 m8">
+                        <input id="Subject" type="text" class="validate">
+                        <label for="Subject">Subject</label>
+                    </div> --}}
+                    {{!-- <div class="chips col s12">
+                        <input id="skills" class="custom-class">
+                    </div> --}}
+                    <button class="btn waves-effect right submit-btn">Submit</button>
+                    {{!-- </form> --}}
+                    {{!-- <a class="btn waves-effect right submit-btn" href="./myprojects.html">Submit</a> --}}
+                </div>
+            </form>
+        </div>
+        <div class="col l3">
+            <div class="notif-container">
+                <div class="notif-header">
+                    <h5>Notifications</h5>
+                </div>
+                <div class="notif-body">
+                    <div class="notif-item">
+                        <div class="notif-item-header">
+                            <div class="notif-item-title">
+                                <p>New Assignment</p>
+                            </div>
+                            <div class="notif-item-date">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="notif-item-body">
+                            <p>You have a new assignment</p>
+                        </div>
+                    </div>
+                    <div class="notif-item">
+                        <div class="notif-item-header">
+                            <div class="notif-item-title">
+                                <p>New Request</p>
+                            </div>
+                            <div class="notif-item-date">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="notif-item-body">
+                            <p>Aashka Doshi requested to join your project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, {});
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.tabs');
+                var instances = M.Tabs.init(elems, {});
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.chips');
+                var instances = M.Chips.init(elems, {
+                    placeholder: 'Enter skills',
+                    secondaryPlaceholder: '+Skill',
+                    data: [{
+                        tag: 'JavaScript'
+                    }, {
+                        tag: 'HTML'
+                    }, {
+                        tag: 'CSS'
+                    }]
+                });
+            });
+        </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Create Group
+    <form action="/student/assignment/{{assignmentId}}/create-group" method="POST">
+        <label for="">name</label>
+        <input type="text" name="name" required>
+        <label for="">Topic</label>
+        <input type="text" name="topic" id="">
+        <label for="">description</label>
+        <input type="text" name="description" id="">
+        <label for="">github Link</label>
+        <input type="text" name="githubLink" id="">
+        <label for=""> Skills</label>
+        <input type="text" name="skills" id="">
+        <button>Submit</button>
+    </form>
+</body>
+</html> --}}

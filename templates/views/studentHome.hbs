@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="/css/navbarfooter.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+
+    <title>Home | FindAlly</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/student/home" class="brand-logo center">FindAlly</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="/assets/sidenav.jpg">
+                </div>
+                <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                        src="https://init-svg.herokuapp.com/svg/Abdul/Kabir/ffffff/animate"></a>
+                <a href="studentprofile.html"><span class="name">Abdul Kabir <i
+                            class="material-icons tiny">create</i></span></a>
+                <a href="#email"><span class="email">abdulkabir@gmail.com</span></a>
+            </div>
+        </li>
+        <li class="active"><a href="/student/home" class="waves-effect"><i class="material-icons">home</i>Home</a>
+        </li>
+        <li><a href="myprojects.html" class="waves-effect"><i class="material-icons">bubble_chart</i>My
+                Projects</a></li>
+        <li><a href="initiateproject.html" class="waves-effect"><i class="material-icons">add</i>Initiate Project</a>
+        </li>
+        <li><a href="newassignments.html" class="waves-effect"><i class="material-icons">queue</i>New Assignments</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+        <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col l3 hide-on-med-and-down">
+            <ul id="slide-out" class="sidenav sidebar">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="/assets/sidenav.jpg">
+                        </div>
+                        <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                                src="https://init-svg.herokuapp.com/svg/{{user.name}}/Uni/ffffff/animate"></a>
+                        <a href="/student/profile/{{user._id}}"><span class="name">{{user.name}} <i
+                                    class="material-icons tiny">create</i></span></a>
+                        <a href="#email"><span class="email">{{user.email}}</span></a>
+                    </div>
+                </li>
+                <li class="active"><a href="/student/home" class="waves-effect"><i
+                            class="material-icons">home</i>Home</a></li>
+                <li><a href="/student/groups" class="waves-effect"><i class="material-icons">bubble_chart</i>My
+                        Groups</a></li>
+                {{!-- <li><a href="initiateproject.html" class="waves-effect"><i class="material-icons">add</i>Initiate
+                        Project</a>
+                </li> --}}
+                <li><a href="newassignments.html" class="waves-effect"><i class="material-icons">queue</i>New
+                        Assignments</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+                <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+            </ul>
+        </div>
+        <div class="col l6">
+            <div class="post-container">
+                <div class="row">
+                    {{#each assignments as |assignment|}}
+                    <div class="col l12">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title" style="display: flex; justify-content: space-between;">
+                                    <p class="title">{{assignment.title}}</p>
+                                    {{!-- <p>2w</p> --}}
+                                </span>
+                                {{assignment.description}}
+                                <span style="display: flex; justify-content: space-between;">
+                                    <p style="color: #ee9949;"></p>
+                                    <p style="color: #ee9949;">Assigned by: {{assignment.host}}</p>
+                                </span>
+                                <div class="chip">Node</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">React</div>
+                                <div class="chip">Material UI</div>
+                            </div>
+                            <div class="card-action">
+                                <a href="/student/assignment/{{assignment._id}}">View Project</a>
+                                <span>
+                                    <i class="material-icons">people</i> &nbsp; &nbsp;
+                                    <p> 3 | {{assignment.maxTeammateCount}}</p> &nbsp; &nbsp;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col l3">
+            <div class="notif-container">
+                <div class="notif-header">
+                    <h5>Notifications</h5>
+                </div>
+                <div class="notif-body">
+                    
+                    {{#each notifications as |notification|}}
+                    <div class="notif-item">
+                        <div class="notif-item-header">
+                            <div class="notif-item-title">
+                                <p>New Request</p>
+                            </div>
+                            <div class="notif-item-date">
+                                {{!-- <p>2 days ago</p> --}}
+                            </div>
+                        </div>
+                        <div class="notif-item-body">
+                            <p>Join Our Group {{notification.name}}</p>
+                        </div>
+                        <form action="/group/add/{{notification.memberId}}/{{notification._id}}" method="POST">
+                            <button name="descision" value="1">Accept</button>
+                            <button name="descision" value="2">Reject</button>
+                        </form>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, {});
+            });
+        </script>
+</body>
+
+</html>
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Student Home
+    <form action="/student/groups">
+        <button>My groups</button>
+    </form>
+    {{#each assignments as |assignment|}}
+            <br>
+       <a href="/student/assignment/{{assignment._id}}"> {{assignment.title}} </a> <br>
+        {{assignment.description}} <br>
+        {{assignment.host}} <br>
+        <br>
+    {{/each}}
+    
+</body>
+</html> --}}

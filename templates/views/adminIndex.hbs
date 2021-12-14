@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="/css/navbarfooter.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+
+    <title>Home | FindAlly</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">FindAlly</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="/assets/sidenav.jpg">
+                </div>
+                <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                        src="https://init-svg.herokuapp.com/svg/admin/admin/ffffff/animate"></a>
+                <a href="#"><span class="name">{{user.name}} <i class="material-icons tiny">create</i></span></a>
+                <a href="#email"><span class="email">{{user.email}}</span></a>
+            </div>
+        </li>
+        {{!-- <li class="active"><a href="adminhome.html" class="waves-effect"><i class="material-icons">home</i>Home</a> --}}
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+        <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col l3 hide-on-med-and-down">
+            <ul id="slide-out" class="sidenav sidebar">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="/assets/sidenav.jpg">
+                        </div>
+                        <a href="#user"><img style="background-color: #ee9949;" class="circle"
+                                src="https://init-svg.herokuapp.com/svg/{{user.name}}/{{user.name}}/ffffff/animate"></a>
+                        <a href="#"><span class="name">{{user.name}} <i class="material-icons tiny">create</i></span></a>
+                        <a href="#email"><span class="email">{{user.email}}</span></a>
+                    </div>
+                </li>
+                {{!-- <li class="active"><a href="adminhome.html" class="waves-effect"> --}}
+                    {{!-- <i
+                            class="material-icons">home</i>Home --}}
+                            {{!-- </a> --}}
+                {{!-- </li> --}}
+                <li>
+                    <div class="divider"></div>
+                </li>
+                {{!-- <li><a href="settings.html" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li> --}}
+                <li><a class="waves-effect" href="index.html" style="color: red;">Logout</a></li>
+            </ul>
+        </div>
+        <div class="col l6">
+            {{!-- <form class="csv-form"> --}}
+                <div class="row">
+                    <div class="col s12">
+                        <h4 class="center">Upload Data</h3>
+                            <form action="/admin/register/students" method="POST" enctype="multipart/form-data">
+                                
+                                    
+                                        <input type="file" name="student" class="btn btn-primary" required>
+
+                                <button class="waves-effect waves-light btn submit-btn right" > Submit</button>
+                            
+
+                                </form>
+                                <br>
+                                <br>
+                                <br>
+                                <form action="/admin/register/teachers" method="POST" enctype="multipart/form-data">
+                                    <p>
+                                        <label>
+                                            {{!-- <input class="with-gap" name="group1" type="radio" /> --}}
+                                            <span>Teacher</span>
+                                        </label>
+                                    </p>
+                                </span>
+                               
+                                        <input type="file" name="teacher" class="btn btn-primary" required>
+
+                                <button class="waves-effect waves-light btn submit-btn right" > Submit</button>
+                                {{!-- <a class="waves-effect waves-light btn submit-btn right">Submit</a> --}}
+                                {{!-- </form> --}}
+                            </form>
+                    </div>
+                </div>
+            {{!-- </form> --}}
+        </div>
+        {{!-- <div class="col l3">
+            <div class="notif-container">
+                <div class="notif-header">
+                    <h5>Notifications</h5>
+                </div>
+                <div class="notif-body">
+                    <div class="notif-item">
+                        <div class="notif-item-header">
+                            <div class="notif-item-title">
+                                <p>New Project</p>
+                            </div>
+                            <div class="notif-item-date">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="notif-item-body">
+                            <p>Abdul Kabir initiated a new project for IP-Assignment</p>
+                        </div>
+                    </div>
+                    <div class="notif-item">
+                        <div class="notif-item-header">
+                            <div class="notif-item-title">
+                                <p>New Project</p>
+                            </div>
+                            <div class="notif-item-date">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="notif-item-body">
+                            <p>Abdul Kabir initiated a new project for IP-Assignment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, {});
+            });
+        </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/admin/register/students" method="POST" enctype="multipart/form-data">
+    <label for="">Student</label>
+    <input type="file" name="student" required>
+    <button>Submit</button>
+    </form>
+    
+    <form action="/admin/register/teachers" method="POST" enctype="multipart/form-data">
+        <label for="">Teacher</label>
+        <input type="file" name="teacher" required>
+        <button>Submit</button>
+    </form>
+</body>
+</html> --}}

@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 35%;
+}
+
+.container {
+    box-shadow: 0 10px 20px black;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Abel', sans-serif;
+    padding-bottom: 2rem;
+}
+
+.image {
+    height: 13rem;
+    width: 13rem;
+    background-color: white;
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    top: 200px;
+    margin-left: 33%;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-18deg);
+}
+
+.shape {
+    height: 20rem;
+    width: 130%;
+    background-color: #259eaf;
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(18deg);
+}
+
+.name{
+    font-size: 3rem;
+    color: #259eaf;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.dob{
+    margin-top: 1rem;
+}
+.dob .title, .status .title{
+    font-size: 1.4rem;
+    color: #161616;
+}
+
+.dob .date{
+    font-size: 1.7rem;
+    color: #161616;
+    font-weight: bold;
+}
+
+.status{
+    margin-top: 1rem;
+}
+
+.status .status-text {
+    font-size: 1.7rem;
+    color: #00b418;
+    font-weight: bold;
+}

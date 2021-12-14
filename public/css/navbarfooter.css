@@ -1,0 +1,38 @@
+* {
+    font-family: 'Quicksand';
+}
+
+.sidebar {
+    transform: translateX(0%) !important;
+    margin-top: 4rem !important;
+    z-index: 0 !important;
+    box-shadow: none !important;
+    width: 22.5%;
+    border: 1px solid #eeeeee !important;
+    border-left: 0px !important;
+}
+
+nav{
+    background-color: #87c75d !important;
+}
+
+.nav-wrapper{
+    padding: 0 5rem;
+}
+
+.user-view{
+    background-color: #00000094;
+}
+
+.sidenav .background img{
+    height: 100%;
+}
+
+.sidenav .name, .sidenav .email{
+    color: #ffffff;
+    font-size: 1.2rem !important;
+}
+
+.brand-logo{
+    font-family: 'Lobster Two';
+}
